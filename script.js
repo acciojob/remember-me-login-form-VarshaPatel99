@@ -4,15 +4,14 @@ const passwordInput = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
-// Show existing user button if data exists
-window.onload = function () {
+// Show existing user button on page load
+document.addEventListener("DOMContentLoaded", function () {
   const savedUser = localStorage.getItem("username");
-  const savedPass = localStorage.getItem("password");
 
-  if (savedUser && savedPass) {
+  if (savedUser) {
     existingBtn.style.display = "block";
   }
-};
+});
 
 // Form submit
 form.addEventListener("submit", function (e) {
